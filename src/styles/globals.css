@@ -1,0 +1,46 @@
+/* =============================================================
+   globals.css
+   Reset, CSS variables, and base styles.
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700;900&display=swap');
+
+:root {
+  --bg-primary:    #0a1628;
+  --bg-secondary:  #0f1f3d;
+  --bg-card:       #111d35;
+  --bg-card2:      #162040;
+  --accent-green:  #00e676;
+  --accent-gold:   #ffd700;
+  --accent-red:    #ff4444;
+  --accent-blue:   #4fc3f7;
+  --text-primary:  #e8f4fd;
+  --text-muted:    #7899b8;
+  --border:        rgba(78, 144, 226, 0.2);
+  --glow-green:    0 0 12px rgba(0, 230, 118, 0.4);
+  --glow-gold:     0 0 12px rgba(255, 215, 0, 0.4);
+  --radius:        12px;
+  --radius-sm:     8px;
+  --font-body:     'Rajdhani', sans-serif;
+  --font-display:  'Orbitron', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-primary);
+  color:            var(--text-primary);
+  font-family:      var(--font-body);
+  font-size:        16px;
+  min-height:       100vh;
+  overflow-x:       hidden;
+}
+
+button {
+  cursor:      pointer;
+  font-family: inherit;
+  border:      none;
+  outline:     none;
+}
+
+button:disabled { opacity: 0.4; cursor: not-allowed; }

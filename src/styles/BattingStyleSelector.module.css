@@ -1,0 +1,89 @@
+/* =============================================================
+   BattingStyleSelector.module.css
+   ============================================================= */
+
+.container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.cards {
+  display: flex;
+  gap: 12px;
+}
+
+.card {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 14px 10px;
+  background: rgba(255,255,255,0.04);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.card:hover:not(:disabled) {
+  border-color: var(--accent, #fff);
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+
+.selected {
+  border-color: var(--accent) !important;
+  background: rgba(var(--accent), 0.08) !important;
+  box-shadow: 0 0 12px rgba(255,255,255,0.1);
+}
+
+.icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 0.68rem;
+  color: var(--accent, var(--text-muted));
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.activeBadge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--accent);
+  color: #000;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 2px 5px;
+  border-radius: 4px;
+}

@@ -1,0 +1,35 @@
+/* =============================================================
+   Commentary.module.css
+   ============================================================= */
+
+.box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  min-height: 52px;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mic { font-size: 1.2rem; flex-shrink: 0; }
+.text { flex: 1; }
+
+/* Category color accents */
+.wicket   { border-color: #e74c3c; background: rgba(231,76,60,0.08);   }
+.boundary { border-color: #3498db; background: rgba(52,152,219,0.08);  }
+.six      { border-color: #9b59b6; background: rgba(155,89,182,0.1);   }
+.dot      { border-color: #7f8c8d; background: rgba(127,140,141,0.06); }

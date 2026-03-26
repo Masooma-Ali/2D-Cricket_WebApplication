@@ -1,0 +1,164 @@
+/* =============================================================
+   PowerBar.module.css
+   ============================================================= */
+
+.wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  user-select: none;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* ── Bar container ──────────────────────────────────────────── */
+.bar {
+  position: relative;
+  display: flex;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.1);
+  cursor: not-allowed;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.active {
+  cursor: pointer;
+  border-color: var(--accent-green);
+  box-shadow: var(--glow-green), 0 0 0 1px rgba(0,230,118,0.2);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: var(--glow-green); }
+  50%       { box-shadow: 0 0 24px rgba(0,230,118,0.7); }
+}
+
+/* ── Segments ───────────────────────────────────────────────── */
+.segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: filter 0.2s;
+  flex-shrink: 0;
+}
+
+.active .segment:hover { filter: brightness(1.2); }
+
+.segLabel {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(0,0,0,0.85);
+  text-shadow: 0 1px 1px rgba(255,255,255,0.2);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ── Slider ─────────────────────────────────────────────────── */
+.slider {
+  position: absolute;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 8px #fff, 0 0 16px rgba(255,255,255,0.5);
+  pointer-events: none;
+  z-index: 10;
+  transition: left 0.016s linear;
+}
+
+.sliderArrow {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+/* ── Scale labels ───────────────────────────────────────────── */
+.scale {
+  position: relative;
+  height: 28px;
+  margin-top: 4px;
+}
+
+.scaleMark {
+  position: absolute;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scaleLine {
+  width: 1px;
+  height: 6px;
+  background: var(--text-muted);
+}
+
+.scaleNum {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.scaleStart {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
+
+/* ── Legend ─────────────────────────────────────────────────── */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 10px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendProb {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ── Hint text ──────────────────────────────────────────────── */
+.hint {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}

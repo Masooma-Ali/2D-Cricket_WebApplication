@@ -1,0 +1,129 @@
+/* =============================================================
+   App.module.css
+   Main application layout and header styles.
+   ============================================================= */
+
+.app {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at top, #0d1f3c 0%, #050d1a 60%);
+  padding: 16px;
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  color: var(--accent-gold);
+  text-shadow: var(--glow-gold);
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ── Main grid ─────────────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  grid-template-rows: auto auto auto auto;
+  gap: 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fieldArea {
+  grid-column: 1;
+  grid-row: 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.scoreArea {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.styleArea {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.powerArea {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.commentaryArea {
+  grid-column: 1 / 3;
+  grid-row: 4;
+}
+
+/* ── Bowl button ────────────────────────────────────────────── */
+.bowlRow {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bowlBtn {
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #00c853, #00e676);
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  box-shadow: var(--glow-green), 0 4px 16px rgba(0,0,0,0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.bowlBtn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,230,118,0.6), 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.bowlBtn:active:not(:disabled) { transform: scale(0.97); }
+
+.restartSmallBtn {
+  padding: 10px 22px;
+  background: transparent;
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+
+.restartSmallBtn:hover { background: rgba(255,68,68,0.12); }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .scoreArea  { grid-column: 1; grid-row: 2; }
+  .styleArea  { grid-column: 1; grid-row: 3; }
+  .bowlRow    { grid-column: 1; grid-row: 4; }
+  .powerArea  { grid-column: 1; grid-row: 5; }
+  .commentaryArea { grid-column: 1; grid-row: 6; }
+}
