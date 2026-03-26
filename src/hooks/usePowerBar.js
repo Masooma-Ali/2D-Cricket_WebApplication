@@ -10,7 +10,7 @@ import { SLIDER_SPEED_MS } from '../utils/gameConstants';
  * Returns sliderPos (0..1), isRunning, and a stop function.
  * The slider bounces back and forth (ping-pong) for better UX.
  *
- * @param {boolean} active - should slider be animating?
+ * @param {boolean} active 
  */
 export default function usePowerBar(active) {
   const [sliderPos, setSliderPos] = useState(0);

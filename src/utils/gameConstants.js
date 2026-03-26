@@ -53,7 +53,7 @@ export const PROBABILITIES = {
 
 // ── Slider Speed ─────────────────────────────────────────────
 // Time in ms for slider to travel full bar width (one pass)
-export const SLIDER_SPEED_MS = 2000;
+export const SLIDER_SPEED_MS = 5000;
 
 // ── Commentary Lines ──────────────────────────────────────────
 export const COMMENTARY = {
