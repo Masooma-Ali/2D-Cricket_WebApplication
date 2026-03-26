@@ -1,8 +1,5 @@
 # 🏏 Cricket 
 
-A **2D Cricket Web Application** built with React, HTML5 Canvas, and CSS Modules.
-
----
 
 ## Project Structure
 
@@ -24,9 +21,9 @@ A **2D Cricket Web Application** built with React, HTML5 Canvas, and CSS Modules
 │   │
 │   ├── hooks/                      # Custom React Hooks
 │   │   ├── useGameState.js         # All game state + phase machine
-│   │   └── usePowerBar.js          # Animated slider logic (rAF)
+│   │   └── usePowerBar.js          # Animated slider logic 
 │   │
-│   ├── utils/                      # Pure Logic (no React)
+│   ├── utils/                      # Logic
 │   │   ├── gameConstants.js        # Probabilities, rules, commentary
 │   │   └── gameLogic.js            # Outcome resolution, formatting
 │   │
