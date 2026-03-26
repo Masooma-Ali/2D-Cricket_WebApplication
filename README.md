@@ -1,4 +1,4 @@
-# 🏏 Cricket Blitz — CS-4032 Assignment #02
+# 🏏 Cricket 
 
 A **2D Cricket Web Application** built with React, HTML5 Canvas, and CSS Modules.
 
@@ -7,7 +7,7 @@ A **2D Cricket Web Application** built with React, HTML5 Canvas, and CSS Modules
 ## Project Structure
 
 ```
-cricket-app/
+2D-Cricket_WebApplication/
 ├── public/
 │   └── index.html                  # HTML entry point
 ├── src/
@@ -130,4 +130,3 @@ Output goes to the `build/` folder — ready to deploy.
 
 ---
 
-*CS-4032: Web Programming — Assignment #02*
